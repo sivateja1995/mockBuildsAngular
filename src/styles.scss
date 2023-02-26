@@ -11,6 +11,41 @@ body {
   position: relative;
 }
 
+:root {
+  /* Colors */
+
+  --primary-default: #e5253c;
+  --primary-secondary: #f95e71;
+  --background-default: #fff;
+  --body-text-default: #999999;
+  --heading-text-default: #303030;
+  --nav-background-default: #fff;
+  --body-background-default: #fff;
+  --fluid-container-default: #f7f7f7;
+  --nav-icon-active-default: #e5253c;
+  --border-color-default: #ddd;
+  --warning-default-color: #ffc107;
+  --box-shadow-default: #dedfdf;
+  --red-color: #e9352a;
+  --mobile-nav-bg: #eeecec;
+  --primary-default-darker: #c21036;
+  --button-shadow-hover: rgba(0, 0, 0, 0.6);
+  --backbtn-default: #e4e4e4;
+  --black-color: #000000;
+  --grey-color: #cacaca;
+  --success-alert-bg: #d6f7e1;
+  --success-alert-txt: #03851e;
+  --chat-msg-bg: #ededed;
+  --delete-msg-txt: #e5263d;
+  --delete-msg-bg: #ffe9eb;
+  --notification-color: #f3f3f3;
+  --notification-hover: #fafafa;
+  --dark-grey-color: #5d5a5a;
+  --video-icon-color: #555555;
+  --cancel-default: #a6a6a6;
+  --black-opacity50: rgba(0, 0, 0, 0.454);
+}
+
 .example-container {
   display: flex;
   flex-direction: column;
@@ -42,4 +77,60 @@ h1.example-app-name {
   /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
      `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
+}
+
+
+.upload-post-wrapper {
+  border: 0.2rem dashed var(--border-color-default);
+  position: relative;
+  height: 23.5rem;
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+
+  .upload-inner-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  .upload-image-box {
+    flex-basis: 9rem;
+    border: 0.1rem solid var(--border-color-default);
+    height: 100%;
+    border-radius: 0.4rem;
+    margin: 0.5rem;
+
+    img {
+      width: auto;
+      height: 9rem;
+    }
+
+    .cross-position-box {
+      right: 0.3rem;
+      cursor: pointer;
+      position: absolute;
+      top: 0.3rem;
+      border-radius: 50%;
+      min-width: 1.5rem;
+      height: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(45deg);
+      background-color: var(--background-default);
+      box-shadow: 0.2rem 0 0.2rem var(--box-shadow-default);
+
+      .cross-icon-position {
+        line-height: normal;
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--body-text-default);
+      }
+    }
+  }
 }

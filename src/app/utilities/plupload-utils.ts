@@ -1,5 +1,5 @@
 
-import { BlobFileInfo } from '../shared/blob/blob-file-info.model';
+import { BlobFileInfo } from '../shared/models/blob/blob-file-info.model';
 
 export class PluploadUtil {
   addFilesButton!: HTMLLIElement;
