@@ -1,7 +1,6 @@
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UploadsModule } from './modules/uploads/uploads.module';
 
 const routes: Routes = [
   {
