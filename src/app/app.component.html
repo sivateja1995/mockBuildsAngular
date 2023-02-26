@@ -12,8 +12,8 @@
   <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav class="side-nav" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
-      <mat-nav-list>
-        <p *ngFor="let list of navList">{{list.listName}}</p>
+      <mat-nav-list *ngFor="let list of navList">
+        <button mat-stroked-button (click)="route(list.routePath)" >{{list.listName}}</button>
       </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content>

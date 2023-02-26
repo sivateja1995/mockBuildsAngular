@@ -4,17 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '/upload',
+    path: 'upload',
     loadChildren: () =>
       import('./modules/uploads/uploads.module').then((m) => m.UploadsModule),
-  },
-  {
-    path: '',
-    component: AppComponent,
-  },
-  {
-    path: '**',
-    redirectTo: '',
   },
 ];
 
