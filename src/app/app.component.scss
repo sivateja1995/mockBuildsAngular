@@ -12,3 +12,15 @@
   width: 10% !important;
 }
 
+.list{
+  width: 90%;
+  height: 2rem;
+  background-color: var(--primary-secondary);
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 5% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
