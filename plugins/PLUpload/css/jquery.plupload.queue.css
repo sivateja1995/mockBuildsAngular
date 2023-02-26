@@ -1,0 +1,662 @@
+/*
+   Plupload
+------------------------------------------------------------------- */
+
+.plupload_wrapper * {
+  box-sizing: content-box;
+}
+
+.plupload_button {
+  display: -moz-inline-box; /* FF < 3*/
+  display: inline-block;
+  font: normal 12px sans-serif;
+  text-decoration: none;
+  color: #42454a;
+  border: 1px solid #bababa;
+  padding: 2px 8px 3px 20px;
+  margin-right: 4px;
+  background: #f3f3f3 url("../img/buttons.png") no-repeat 0 center;
+  outline: 0;
+
+  /* Optional rounded corners for browsers that support it */
+  -moz-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.plupload_button:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.plupload_disabled,
+a.plupload_disabled:hover {
+  color: #737373;
+  border-color: #c5c5c5;
+  background: #ededed url("../img/buttons-disabled.png") no-repeat 0 center;
+  cursor: default;
+}
+
+.plupload_add {
+  background-position: -181px center;
+}
+
+.plupload_wrapper {
+  font: normal 11px Verdana, sans-serif;
+  width: 100%;
+}
+
+.plupload_container {
+  padding: 8px;
+  background: url("../img/transp50.png");
+  /*-moz-border-radius: 5px;*/
+}
+
+.plupload_container input {
+  border: 1px solid #ddd;
+  font: normal 11px Verdana, sans-serif;
+  width: 98%;
+}
+
+.plupload_header {
+  display: none;
+  background: #2a2c2e url("../img/backgrounds.gif") repeat-x;
+}
+.plupload_header_content {
+  background: url("../img/backgrounds.gif") no-repeat 0 -317px;
+  min-height: 56px;
+  padding-left: 60px;
+  color: #fff;
+}
+.plupload_header_title {
+  font: normal 18px sans-serif;
+  padding: 6px 0 3px;
+}
+.plupload_header_text {
+  font: normal 12px sans-serif;
+}
+.plupload_container video {
+  margin-top: 0px;
+}
+.plupload_filelist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plupload_filelist li {
+  padding: 0px;
+  background: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.plupload_filelist_header,
+.plupload_filelist_footer {
+  background: #dfdfdf;
+  padding: 8px 8px;
+  color: #42454a;
+}
+.plupload_filelist_header {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #cdcdcd;
+  display: none;
+}
+
+.plupload_file_name {
+  float: left;
+  overflow: hidden;
+  display: none;
+}
+.plupload_file_status {
+  color: #777;
+}
+.plupload_file_status span {
+  color: #42454a;
+}
+.plupload_file_size,
+.plupload_file_status,
+.plupload_progress {
+  float: right;
+  width: 80px;
+}
+.plupload_file_size,
+.plupload_file_status,
+.plupload_file_action {
+  text-align: right;
+}
+
+.plupload_filelist .plupload_file_name {
+  width: 205px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.plupload_file_action {
+  float: right;
+}
+
+.plupload_progress,
+.plupload_upload_status {
+  display: none;
+}
+
+.plupload_progress_container {
+  margin-top: 3px;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 1px;
+}
+.plupload_progress_bar {
+  width: 0px;
+  height: 7px;
+  background: #cdeb8b;
+}
+
+.plupload_scroll .plupload_filelist_header .plupload_file_action,
+.plupload_scroll .plupload_filelist_footer .plupload_file_action {
+  margin-right: 17px;
+}
+
+/* Floats */
+
+.plupload_clear,
+.plupload_clearer {
+  clear: both;
+}
+.plupload_clearer,
+.plupload_progress_bar {
+  display: block;
+  font-size: 0;
+  line-height: 0;
+}
+
+li.plupload_droptext {
+  background: transparent;
+  text-align: center;
+  vertical-align: middle;
+  border: 0;
+  line-height: 165px;
+}
+
+.plupload_filelist_header {
+  border-top: none;
+  border-bottom: none;
+  display: none;
+  padding: 0px;
+}
+li.plupload_droptext {
+  background: #fff;
+  text-align: center;
+  vertical-align: middle;
+  border: 0;
+  line-height: normal;
+  padding: 0px;
+}
+.plupload_scroll .plupload_filelist {
+  height: 16.5rem;
+  background: #fff;
+  position: relative !important;
+  overflow-x: auto;
+}
+
+.plupload_file_size,
+.plupload_file_status,
+.plupload_progress {
+  float: right;
+  width: auto;
+  display: none;
+}
+.plupload_file_action {
+  float: none;
+  margin: 0px;
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+  color: var(--heading-text-default);
+  transform: rotate(45deg);
+  background: var(--background-default);
+  padding: 0px;
+  width: 1.5rem;
+  padding: 0px;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+.plupload_start {
+  display: none !important;
+}
+.plupload_button {
+  display: -moz-inline-box;
+  display: inline-block;
+  font: normal 12px sans-serif;
+  text-decoration: none;
+  color: #42454a;
+  border: 1px solid var(--border-color-default);
+  padding: 1rem 2rem;
+  margin-right: 0px;
+  background: var(--border-color-default);
+  outline: 0;
+  font-family: "SF UI Display", sans-serif;
+  font-weight: 300;
+  border-radius: 3px;
+  font-size: 1.6rem;
+  border-radius: 2.4rem;
+  color: var(--heading-text-default) !important;
+}
+
+.plupload_filelist_header,
+.plupload_filelist_footer {
+  background: none;
+  padding: 0px;
+  color: var(--heading-text-default);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.plupload_scroll .plupload_filelist_header .plupload_file_action,
+.plupload_scroll .plupload_filelist_footer .plupload_file_action {
+  margin-right: 0px;
+  display: none;
+}
+.plupload_scroll .plupload_filelist {
+  height: 18rem;
+  background: var(--background-default);
+  position: relative !important;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+.plupload_filelist li {
+  display: flex;
+  width: 22%;
+  margin: 1.2%;
+  height: 7.7rem;
+  padding: 0px;
+  background: none;
+  border: 1px solid var(--border-color-default);
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+#dvPLUploadProfileImage li {
+height: 20.8rem;
+border-radius: 0.8rem;
+display: block;
+margin: 0;
+background: none;
+border: 1px solid var(--border-color-default);
+position: relative;
+overflow: hidden;
+width: 100%;
+}
+
+#dvPLUploadProfileImage  .mybtn{
+  margin-top: 0 !important;
+
+}
+
+
+ #dvPLUploadProfileImage .plupload_scroll .plupload_filelist {
+  height: 100% !important;
+}
+#dvPLUploadProfileImage .plupload_droptext {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .plupload_filelist li {
+    display: inline-flex;
+    width: 6.5rem;
+    margin: 1%;
+    height: 6.5rem;
+    padding: 0px;
+    background: none;
+    border: 1px solid var(--border-color-default);
+  }
+  .plupload_button {
+    font: normal 12px sans-serif;
+    text-decoration: none;
+    color: #42454a;
+    border: 1px solid var(--border-color-default);
+    padding: 0.5rem 1rem;
+    margin-right: 0px;
+    background: var(--border-color-default);
+    outline: 0;
+    font-family: "SF UI Display", sans-serif;
+    font-weight: 300;
+    border-radius: 3px;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    border-radius: 2.4rem;
+    color: var(--heading-text-default) !important;
+  }
+}
+li.plupload_droptext {
+  background: #fff;
+  text-align: center;
+  vertical-align: middle;
+  border: 0;
+  line-height: 20px;
+  padding: 0px;
+  position: absolute;
+  top: 50%;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  display: flex;
+  width: 100%;
+  margin: 0%;
+  height: 100%;
+  padding-top: 4rem;
+  /* align-items: center; */
+  padding: 0px;
+  background: none;
+  border: none;
+  padding-top: 0rem !important;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "SF UI Display";
+  display: none;
+}
+li.plupload_delete a :before {
+  content: "&#x2715";
+  font-size: 1.2rem;
+}
+.justify-start {
+  justify-content: flex-start !important;
+}
+.mybtn {
+  display: inline-flex !important;
+  width: 40% !important;
+  margin-top: 7rem !important;
+  height: 4rem !important;
+  padding: 0px !important;
+  background: none !important;
+  border: 0px !important;
+}
+.mybtn a {
+  width: 140px !important;
+  margin: 0px auto !important;
+}
+.pl-list-thumb {
+  display: -moz-inline-box;
+  display: inline-block;
+  font: normal 1.2rem sans-serif;
+  text-decoration: none;
+  color: #42454a;
+  border: 1px solid var(--border-color-default);
+  padding: 0rem;
+  background: var(--border-color-default);
+  outline: 0;
+  font-family: "SF UI Display", sans-serif;
+  font-weight: 300;
+  border-radius: 3px;
+  font-size: 1rem;
+  border-radius: 1.4rem;
+  height: 2.2rem;
+  line-height: 2rem;
+  margin: 2.6rem 1rem;
+}
+@media only screen and (max-width: 767px) {
+  .pl-list-thumb {
+    display: -moz-inline-box;
+    display: inline-block;
+    font: normal 1.2rem sans-serif;
+    text-decoration: none;
+    color: #42454a;
+    border: 1px solid var(--border-color-default);
+    padding: 0rem;
+    background: var(--border-color-default);
+    outline: 0;
+    font-family: "SF UI Display", sans-serif;
+    font-weight: 300;
+    border-radius: 3px;
+    font-size: 1rem;
+    border-radius: 1.4rem;
+    height: 2rem;
+    line-height: 2rem;
+    margin: 2.2rem 0.5rem;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .pl-list-thumb {
+    display: -moz-inline-box;
+    display: inline-block;
+    font: normal 1.2rem sans-serif;
+    text-decoration: none;
+    color: #42454a;
+    border: 1px solid var(--border-color-default);
+    padding: 0.4rem 0rem;
+    background: var(--border-color-default);
+    outline: 0;
+    font-family: "SF UI Display", sans-serif;
+    font-weight: 300;
+    border-radius: 3px;
+    font-size: 1rem;
+    border-radius: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    margin: 2.2rem 0.2rem;
+  }
+}
+.plupload_file_name span {
+  display: none;
+}
+.pl-cross-box {
+  position: absolute;
+  right: 0.8rem;
+  color: var(--heading-text-default);
+  transform: rotate(45deg);
+  background: var(--heading-text-default);
+  padding: 0px;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+}
+.pl-cross {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.plupload_file_action a {
+  font-size: 1.2rem;
+  line-height: 1rem;
+  position: absolute;
+  top: 13%;
+  left: 17%;
+  background-image: none;
+}
+.plupload_file_action a:hover {
+  color: var(--background-default);
+}
+.plupload_file_action a:before {
+  color: var(--heading-text-default);
+  content: "+";
+  transform: rotate(45deg);
+}
+#dvPLUploadVideo_filelist li {
+  display: block;
+  width: 100%;
+  margin: 1%;
+  height: 7.5rem;
+  padding: 0px;
+  background: none;
+  position: relative;
+  border: none;
+}
+
+#dvPLUploadVideo_filelist .plupload_droptext {
+  display: none !important;
+}
+
+#dvPLUploadVideo_filelist li .plupload_file_action {
+  float: none;
+  margin: 0px;
+  position: absolute;
+  top: -2rem;
+  right: 0.2rem;
+  color: var(--heading-text-default);
+  transform: rotate(45deg);
+  background: var(--background-default);
+  padding: 0px;
+  width: 1.5rem;
+  padding: 0px;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+#dvPLUploadVideo_filelist li video {
+  height: 175px !important;
+  background: #000 !important;
+}
+@media only screen and (max-width: 575px) {
+  #dvPLUploadVideo_filelist li .plupload_file_action {
+    top: -0rem;
+    right: -0.3rem;
+  }
+  .mybtn {
+    margin-top: 5.5rem !important;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .plupload_scroll .plupload_filelist {
+    height: 14rem !important;
+  }
+  #dvPLUploadVideo_filelist li video {
+    height: 140px !important;
+  }
+  .mybtn a {
+    margin: 2px auto !important;
+  }
+}
+
+.plupload-comment .mybtn {
+  display: inline-flex !important;
+  width: auto !important;
+  margin-top: 0;
+  height: auto !important;
+  padding: 0px !important;
+  background: none !important;
+  border: 0px !important;
+  text-align: center;
+  margin: 0px !important;
+}
+.plupload-comment .mybtn a {
+  width: auto !important;
+  text-indent: -9999px;
+}
+.plupload-comment .mybtn .plupload_button {
+  background: #f5f5f5 url("../img/attach-icon.png") no-repeat 0 center;
+
+  border: 0;
+  margin-top: 0.1rem !important;
+  min-width: 13px;
+}
+
+a#dvCommentPLUploadMediaundefined0_browse {
+  background: #f5f5f5 url("../img/attach-icon.png") no-repeat 0 center;
+
+  border: 0;
+  margin-top: 0.1rem !important;
+  min-width: 13px;
+  line-height: 0px;
+  font-size: 0px;
+  padding: 2rem 2rem !important;
+}
+a[id^="dvCommentPLUploadMedia"] {
+  background: #f5f5f5 url("../img/attach-icon.png") no-repeat 0 center;
+
+  border: 0;
+  margin-top: 0.1rem !important;
+  min-width: 13px;
+  line-height: 0px;
+  font-size: 0px;
+  padding: 2rem 2rem !important;
+}
+.plupload-comment .plupload_filelist li {
+  max-height: 8rem;
+  width: 15.5%;
+  border-radius: 0.8rem;
+  margin: 0.6rem;
+}
+.plupload-comment .plupload_filelist li img {
+  border-radius: 0.8rem;
+  height: 8rem;
+}
+.plupload-comment .plupload_scroll .plupload_filelist {
+  height: auto !important;
+  background: transparent !important;
+}
+.plupload-comment .plupload_container {
+  padding: 0px !important;
+  background: transparent !important;
+}
+.plupload-comment #dvCommentPLUploadMediabrowse_button {
+  display: none;
+}
+.plupload-comment .upload-files {
+  position: absolute;
+  bottom: -4rem !important;
+  right: 12rem !important;
+  display: inline-flex;
+  width: auto !important;
+  margin-top: 0;
+  height: auto !important;
+  padding: 0px !important;
+  background: none !important;
+  border: 0px !important;
+  text-align: center;
+  margin: 0px !important;
+}
+.plupload-comment .upload-files a {
+  background: url(../img/attach-icon.png) no-repeat 0 center;
+  border: 0 !important;
+  margin-top: 0.1rem !important;
+  min-width: 13px !important;
+  background-color: transparent !important;
+  width: auto !important;
+  text-indent: -9999px;
+}
+@media only screen and (max-width: 767px) {
+  .plupload-comment .plupload_filelist li {
+    width: 7.5rem;
+    height: 6.5rem;
+  }
+  .plupload-comment .plupload_filelist li img {
+    height: 6.5rem;
+  }
+}
+.plupload-comment .plupload_button {
+  padding: 1rem 1.2rem !important;
+}
+@media only screen and (max-width: 400px) {
+  .plupload-comment .plupload_filelist li {
+    width: 26%;
+  }
+  .plupload-comment .plupload_filelist li img {
+    height: 5.5rem;
+  }
+}
+.d-flex.flex-wrap.w-100.justify-content-end.align-items-end.float-right.text-right{
+  display: block !important;
+}
+ /* .flex-grow-1.float-right.text-right{
+  display: block !important;
+    width: 100%;
+} */
+.media-add{
+  display: block !important;
+  width: 100%;
+}
+.d-inline-block{
+  display: block !important;
+}
+
+.hidden{
+  display: none !important;
+}
+.plupload-comment .moxie-shim-html5{
+  display: none !important;
+}
